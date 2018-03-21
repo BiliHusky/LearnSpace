@@ -1,2 +1,5 @@
 !.gitignore
 *.iml
+*.idea/*
+resource
+target
