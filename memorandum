@@ -4,3 +4,9 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:BiliHusky/LearnSpace.git
 git push -u origin master
+
+一个正规的README应该包括一下四点：
+1.正确描述项目是什么以及它做了什么
+2.运行项目所需的软件依赖关系及列表以及如何安装他们
+3.一步一步详细了解如何运行该项目
+4.供用户查看的任何演示截图

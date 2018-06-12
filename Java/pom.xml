@@ -6,7 +6,12 @@
 
     <groupId>com.yjw.java</groupId>
     <artifactId>java-search</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Head-First</module>
+        <module>Research</module>
+    </modules>
 
 
 </project>

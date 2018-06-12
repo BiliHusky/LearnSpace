@@ -50,11 +50,11 @@ public static class Basket {
             public void run() {
                 try {
                     while (true) {
-                        System.out.println("consumer prepare consume apple :" + System.currentTimeMillis());
+                        System.out.println("                             consumer prepare consume apple :" + System.currentTimeMillis());
                         basket.consume();
                         basket.consume();
-                        System.out.println("finish consume apple :" + System.currentTimeMillis());
-                        System.out.println("there are " + basket.getAppleNumber() + " after consume apple");
+                        System.out.println("                             finish consume apple :" + System.currentTimeMillis());
+                        System.out.println("                             there are " + basket.getAppleNumber() + " after consume apple");
                         Thread.sleep(1000);
                     }
                 } catch (InterruptedException e) {
@@ -77,5 +77,6 @@ public static class Basket {
     }
 
     public static void main(String[] args) {
+        BlockingQueueTest.testBasket();
     }
 }
