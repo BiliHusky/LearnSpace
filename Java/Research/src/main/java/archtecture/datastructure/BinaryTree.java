@@ -1,8 +1,6 @@
 package archtecture.datastructure;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by yjw on 18-6-12.
@@ -155,6 +153,25 @@ public class BinaryTree {
         } while (list.size() != 0);
 
         return depth;
+    }
+
+    public boolean is_complete_tree(Node node) {
+        Queue<Node> q = new LinkedList<>();
+        Node ps;
+        q.add(node);
+        while ((ps = q.poll()) != null) {
+            q.add(ps.getLeftNode());
+            q.add(ps.getRightNode());
+        }
+
+        while (!q.isEmpty()) {
+            ps = q.poll();
+            if (ps != null) {
+                return false;
+            }
+        }
+
+        return false;
     }
 
     public static void main(String[] args) {
