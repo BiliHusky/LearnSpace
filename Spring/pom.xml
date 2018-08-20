@@ -11,6 +11,7 @@
     <modules>
         <module>../SpringLearn</module>
         <module>Spring-Learn</module>
+        <module>Sprint-boot</module>
     </modules>
 
 
