@@ -1,6 +1,5 @@
 !.gitignore
 *.iml
 *.idea/*
-resources
 target
 *.tmp
