@@ -12,6 +12,12 @@ public class TestFile {
         Car(int p) {
             price = p;
         }
+
+
+        Car() {
+
+        }
+
         int getPrice() {
             return price;
         }
