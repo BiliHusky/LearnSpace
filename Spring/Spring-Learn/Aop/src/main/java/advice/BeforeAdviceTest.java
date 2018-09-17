@@ -32,4 +32,31 @@ public class BeforeAdviceTest {
         Waiter waiter = (Waiter) ctx.getBean("waiter");
         waiter.greetTo("John");
     }
+
+    @Test
+    public void throwAdvice(){
+        String configPath = "advice/beans.xml";
+        ApplicationContext ctx = new ClassPathXmlApplicationContext(configPath);
+        ForumService forumService = (ForumService)ctx.getBean("forumService");
+
+        try{
+            forumService.removeForum(10);
+        } catch (Exception e) {}
+
+        try{
+            forumService.updateForum(new Forum());
+        } catch (Exception e) {}
+    }
+
+    @Test
+    public void introduce() {
+        String configPath = "advice/beans.xml";
+        ApplicationContext ctx = new ClassPathXmlApplicationContext(configPath);
+        ForumService forumService = (ForumService) ctx.getBean("forumService");
+        forumService.removeForum(10);
+
+        Monitorable monitorable = (Monitorable) forumService;
+        monitorable.setMonitorActive(true);
+        forumService.removeForum(10);
+    }
 }

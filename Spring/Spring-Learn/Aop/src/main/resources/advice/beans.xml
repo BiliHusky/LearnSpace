@@ -5,11 +5,48 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="greetingAdvice" class="advice.GreetingBeforeAdvice"/>
+    <bean id="greetingAfter" class="advice.GreetingAfterAdvice"/>
+    <bean id="greetingAround" class="advice.GreetingInterceptor"/>
+    <bean id="transactionManager" class="advice.TransactionManager"/>
+    <bean id="forumServiceTarget" class="advice.ForumService"/>
+    <bean id="pmonitor" class="advice.ControllablePerformanceMonitor"/>
     <bean id="target" class="advice.NaiveWaiter"/>
-    <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
-          p:proxyInterfaces="advice.Waiter"
-          p:interceptorNames="greetingAdvice"
-          p:target-ref="target"
+
+    <!-- add before advice -->
+    <!--<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"-->
+          <!--p:proxyInterfaces="advice.Waiter"-->
+          <!--p:interceptorNames="greetingAdvice"-->
+          <!--p:target-ref="target"-->
+          <!--p:proxyTargetClass="true"-->
+        <!--/>-->
+
+     <!--add after advice with before advice -->
+    <!--<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"-->
+          <!--p:proxyInterfaces="advice.Waiter"-->
+          <!--p:interceptorNames="greetingAdvice, greetingAfter"-->
+          <!--p:target-ref="target"-->
+          <!--p:proxyTargetClass="true"-->
+    <!--/>-->
+
+    <!-- add round advice-->
+    <!--<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"-->
+          <!--p:proxyInterfaces="advice.Waiter"-->
+          <!--p:interceptorNames="greetingAround"-->
+          <!--p:target-ref="target"-->
+          <!--p:proxyTargetClass="true"-->
+    <!--/>-->
+
+    <!-- add transaction manager -->
+    <!--<bean id="forumService" class="org.springframework.aop.framework.ProxyFactoryBean"-->
+          <!--p:interceptorNames="transactionManager"-->
+          <!--p:target-ref="forumServiceTarget"-->
+          <!--p:proxyTargetClass="true"-->
+    <!--/>-->
+    <bean id="forumService" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="pmonitor"
+          p:target-ref="forumServiceTarget"
+          p:interfaces="advice.Monitorable"
           p:proxyTargetClass="true"
-        />
+    />
+
 </beans>
