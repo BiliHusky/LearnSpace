@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>helloworld</module>
-        <module>BootLearn</module>
         <module>bootlearn</module>
         <module>ioc</module>
         <module>Aop</module>
