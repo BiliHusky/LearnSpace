@@ -78,19 +78,5 @@ public class KMP {
         return next;
     }
 
-    public static int[] getNext2(char[] p) {
-        int pLen = p.length;
-        int[] res = new int[pLen];
-        res[0] = -1;
-        int k = -1;
-        int j = 0;
-        while(j<pLen) {
-            if (k == -1 || p[j] == p[k]) {
-                k++;
-                j++;
-            } else {
-                k = res[k];
-            }
-        }
-    }
+
 }

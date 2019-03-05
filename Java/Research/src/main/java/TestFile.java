@@ -23,9 +23,13 @@ public class TestFile {
         }
     }
     public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE);
         System.out.println("所有汽车的价格：");
         for (Car c : Car.values())
             System.out.println(c + " 需要 "
                     + c.getPrice() + " 千美元。");
+
+
+
     }
 }

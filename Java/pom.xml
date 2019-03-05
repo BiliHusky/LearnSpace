@@ -11,6 +11,12 @@
     <modules>
         <module>Head-First</module>
         <module>Research</module>
+        <module>EffectiveJava</module>
+        <module>../JavaPerformance</module>
+        <module>JavaPerformance</module>
+        <module>Java-Performance</module>
+        <module>UT</module>
+        <module>UT-Learn</module>
     </modules>
 
 
