@@ -17,6 +17,12 @@
         <module>Java-Performance</module>
         <module>UT</module>
         <module>UT-Learn</module>
+        <module>Concurrent</module>
+        <module>Mysql-binlog</module>
+        <module>Netty</module>
+        <module>rsa-aes</module>
+        <module>tmysql</module>
+        <module>t1</module>
     </modules>
 
 
