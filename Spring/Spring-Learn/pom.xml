@@ -20,6 +20,7 @@
         <module>Basic</module>
         <module>Spring-Cache</module>
         <module>MVC</module>
+        <module>Core</module>
 
     </modules>
     <dependencies>
