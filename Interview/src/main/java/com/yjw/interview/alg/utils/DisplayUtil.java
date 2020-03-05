@@ -10,4 +10,13 @@ public class DisplayUtil {
             System.out.print("  ");
         }
     }
+
+    public static void showArray(int[] array) {
+        if (array == null || array.length <= 0)
+            return;
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            System.out.print("  ");
+        }
+    }
 }
