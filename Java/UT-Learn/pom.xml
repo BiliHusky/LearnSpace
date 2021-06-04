@@ -17,7 +17,7 @@
         <oozie.version>4.1.0-cdh5.15.0</oozie.version>
         <hadoop.version>2.6.0-cdh5.15.0</hadoop.version>
         <powermock.version>1.6.5</powermock.version>
-        <httpclient.version>4.5.5</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <mokito.version>1.10.19</mokito.version>
         <joda.version>2.10</joda.version>
     </properties>
